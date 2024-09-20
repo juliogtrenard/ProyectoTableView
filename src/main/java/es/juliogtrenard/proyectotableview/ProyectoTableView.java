@@ -16,17 +16,33 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.HBox;
 import static javafx.scene.control.TableView.TableViewSelectionModel;
 
+/**
+ * Aplicación JavaFX que muestra una tabla de personas con funcionalidades para añadir, eliminar y restaurar filas.
+ * Esta clase extiende de Application y proporciona la interfaz de usuario principal.
+ */
 public class ProyectoTableView extends Application {
-    // Fields to add Person details
+    /** Campo de texto para el nombre de la persona */
     private TextField fNameField;
+    /** Campo de texto para el apellido de la persona */
     private TextField lNameField;
+    /** Selector de fecha para la fecha de nacimiento de la persona */
     private DatePicker dobField;
+    /** Tabla para mostrar la lista de personas */
     private TableView<Person> table;
 
+    /**
+     * Punto de entrada principal de la aplicación.
+     * @param args Argumentos de línea de comando (no utilizados)
+     */
     public static void main(String[] args) {
         Application.launch(args);
     }
 
+    /**
+     * Método llamado al iniciar la aplicación JavaFX.
+     * Configura y muestra la interfaz de usuario principal.
+     * @param stage El escenario principal de la aplicación
+     */
     @Override
     @SuppressWarnings("unchecked")
     public void start(Stage stage) {
@@ -58,6 +74,10 @@ public class ProyectoTableView extends Application {
         stage.show();
     }
 
+    /**
+     * Crea y devuelve un panel para ingresar datos de una nueva persona.
+     * @return GridPane con campos de entrada y botón para añadir una nueva persona
+     */
     public GridPane getNewPersonDataPane() {
         GridPane pane = new GridPane();
         pane.setHgap(10);
@@ -72,6 +92,10 @@ public class ProyectoTableView extends Application {
         return pane;
     }
 
+    /**
+     * Elimina las filas seleccionadas de la tabla.
+     * Si no hay filas seleccionadas, muestra un mensaje en la consola.
+     */
     public void deleteSelectedRows() {
         TableViewSelectionModel<Person> tsm = table.getSelectionModel();
         if (tsm.isEmpty()) {
@@ -91,21 +115,38 @@ public class ProyectoTableView extends Application {
         }
     }
 
+    /**
+     * Restaura todas las filas de la tabla a su estado inicial.
+     * Limpia la tabla actual y la rellena con la lista de personas predefinida.
+     */
     public void restoreRows() {
         table.getItems().clear();
         table.getItems().addAll(PersonTableUtil.getPersonList());
     }
 
+    /**
+     * Crea y devuelve un nuevo objeto Person con los datos ingresados en los campos.
+     * @return Nuevo objeto Person con los datos de los campos de entrada
+     */
     public Person getPerson() {
         return new Person(fNameField.getText(), lNameField.getText(), dobField.getValue());
     }
 
+    /**
+     * Añade una nueva persona a la tabla.
+     * Crea un nuevo objeto Person con los datos ingresados y lo añade a la tabla.
+     * Luego limpia los campos de entrada.
+     */
     public void addPerson() {
         Person p = getPerson();
         table.getItems().add(p);
         clearFields();
     }
 
+    /**
+     * Limpia todos los campos de entrada.
+     * Establece los campos de texto y el selector de fecha a null.
+     */
     public void clearFields() {
         fNameField.setText(null);
         lNameField.setText(null);
