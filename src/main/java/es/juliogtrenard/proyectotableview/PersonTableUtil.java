@@ -15,7 +15,7 @@ public class PersonTableUtil {
     /**
      * Genera y devuelve una lista observable de personas.
      * 
-     * @return ObservableList<Person> Una lista observable que contiene cinco objetos Person predefinidos.
+     * @return ObservableList Una lista observable que contiene cinco objetos Person predefinidos.
      */
     public static ObservableList<Person> getPersonList() {
         Person p1 = new Person("Ashwin", "Sharan", LocalDate.of(2012, 10, 11));
@@ -29,7 +29,7 @@ public class PersonTableUtil {
     /**
      * Crea y configura una columna de tabla para el ID de la persona.
      * 
-     * @return TableColumn<Person, Integer> Una columna de tabla configurada para mostrar el ID de la persona.
+     * @return TableColumn Una columna de tabla configurada para mostrar el ID de la persona.
      */
     public static TableColumn<Person, Integer> getIdColumn() {
         TableColumn<Person, Integer> personIdCol = new TableColumn<>("Id");
@@ -40,7 +40,7 @@ public class PersonTableUtil {
     /**
      * Crea y configura una columna de tabla para el nombre de la persona.
      * 
-     * @return TableColumn<Person, String> Una columna de tabla configurada para mostrar el nombre de la persona.
+     * @return TableColumn Una columna de tabla configurada para mostrar el nombre de la persona.
      */
     public static TableColumn<Person, String> getFirstNameColumn() {
         TableColumn<Person, String> fNameCol = new TableColumn<>("First Name");
@@ -51,7 +51,7 @@ public class PersonTableUtil {
     /**
      * Crea y configura una columna de tabla para el apellido de la persona.
      * 
-     * @return TableColumn<Person, String> Una columna de tabla configurada para mostrar el apellido de la persona.
+     * @return TableColumn Una columna de tabla configurada para mostrar el apellido de la persona.
      */
     public static TableColumn<Person, String> getLastNameColumn() {
         TableColumn<Person, String> lastNameCol = new TableColumn<>("Last Name");
@@ -62,7 +62,7 @@ public class PersonTableUtil {
     /**
      * Crea y configura una columna de tabla para la fecha de nacimiento de la persona.
      * 
-     * @return TableColumn<Person, LocalDate> Una columna de tabla configurada para mostrar la fecha de nacimiento de la persona.
+     * @return TableColumn Una columna de tabla configurada para mostrar la fecha de nacimiento de la persona.
      */
     public static TableColumn<Person, LocalDate> getBirthDateColumn() {
         TableColumn<Person, LocalDate> bDateCol = new TableColumn<>("Birth Date");

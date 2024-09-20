@@ -27,13 +27,6 @@ public class Person {
     private LocalDate birthDate;
 
     /**
-     * Enumeración para categorías de edad.
-     */
-    public enum AgeCategory {
-        BABY, CHILD, TEEN, ADULT, SENIOR, UNKNOWN
-    };
-
-    /**
      * Constructor por defecto. Inicializa una persona con todos los campos en null.
      */
     public Person() {
@@ -173,30 +166,6 @@ public class Person {
             isValid = false;
         }
         return isValid;
-    }
-
-    /**
-     * Determina la categoría de edad de la persona basada en su fecha de nacimiento.
-     * @return La categoría de edad de la persona.
-     */
-    public AgeCategory getAgeCategory() {
-        if (birthDate == null) {
-            return AgeCategory.UNKNOWN;
-        }
-        long years = ChronoUnit.YEARS.between(birthDate, LocalDate.now());
-        if (years >= 0 && years < 2) {
-            return AgeCategory.BABY;
-        } else if (years >= 2 && years < 13) {
-            return AgeCategory.CHILD;
-        } else if (years >= 13 && years <= 19) {
-            return AgeCategory.TEEN;
-        } else if (years > 19 && years <= 50) {
-            return AgeCategory.ADULT;
-        } else if (years > 50) {
-            return AgeCategory.SENIOR;
-        } else {
-            return AgeCategory.UNKNOWN;
-        }
     }
 
     /**
