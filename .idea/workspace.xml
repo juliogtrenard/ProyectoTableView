@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b3ab632d-9b2c-4158-b953-d22b1d7de83c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/juliogtrenard/proyectotableview/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/juliogtrenard/proyectotableview/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/juliogtrenard/proyectotableview/PersonTableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/juliogtrenard/proyectotableview/PersonTableUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/juliogtrenard/proyectotableview/ProyectoTableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/juliogtrenard/proyectotableview/ProyectoTableView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;juliogtrenard&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/juliogtrenard/ProyectoTableView.git&quot;,
+    &quot;accountId&quot;: &quot;8ad9c543-c545-4688-8f5d-c2d8d4bfa4c0&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -31,25 +42,25 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2mKWNOyV75h062G1F1xlfwRtPad" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ProyectoTableView.executor": "Run",
-    "Maven.ProyectoTableView [org.apache.maven.plugins:maven-javadoc-plugin:3.10.0:javadoc].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ProyectoTableView.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ProyectoTableView [org.apache.maven.plugins:maven-javadoc-plugin:3.10.0:javadoc].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

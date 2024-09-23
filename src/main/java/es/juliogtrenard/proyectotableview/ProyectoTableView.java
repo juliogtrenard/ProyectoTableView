@@ -8,6 +8,10 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.input.Mnemonic;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -58,8 +62,16 @@ public class ProyectoTableView extends Application {
         GridPane newDataPane  = this.getNewPersonDataPane();
         Button restoreBtn = new Button("Restore Rows");
         restoreBtn.setOnAction(e -> restoreRows());
+
+        KeyCombination kr = new KeyCodeCombination(KeyCode.R, KeyCombination.ALT_DOWN);
+        Mnemonic mnemonic1 = new Mnemonic(restoreBtn, kr);
+
         Button deleteBtn = new Button("Delete Selected Rows");
         deleteBtn.setOnAction(e -> deleteSelectedRows());
+
+        KeyCombination kd = new KeyCodeCombination(KeyCode.D, KeyCombination.ALT_DOWN);
+        Mnemonic mnemonic2 = new Mnemonic(deleteBtn, kd);
+
         VBox root = new VBox(newDataPane, new HBox(restoreBtn, deleteBtn), table);
         root.setSpacing(5);
         root.setStyle("-fx-padding: 10;" +
@@ -70,6 +82,8 @@ public class ProyectoTableView extends Application {
                 "-fx-border-color: blue;");
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        scene.addMnemonic(mnemonic1);
+        scene.addMnemonic(mnemonic2);
         stage.setTitle("Adding/Deleting Rows in a TableViews");
         stage.show();
     }
