@@ -60,17 +60,19 @@ public class ProyectoTableView extends Application {
         // Add columns to the TableView
         table.getColumns().addAll(PersonTableUtil.getIdColumn(), PersonTableUtil.getFirstNameColumn(), PersonTableUtil.getLastNameColumn(), PersonTableUtil.getBirthDateColumn());
         GridPane newDataPane  = this.getNewPersonDataPane();
-        Button restoreBtn = new Button("Restore Rows");
+        Button restoreBtn = new Button("_Restore Rows");
         restoreBtn.setOnAction(e -> restoreRows());
 
         KeyCombination kr = new KeyCodeCombination(KeyCode.R, KeyCombination.ALT_DOWN);
         Mnemonic mnemonic1 = new Mnemonic(restoreBtn, kr);
+        restoreBtn.setMnemonicParsing(true);
 
-        Button deleteBtn = new Button("Delete Selected Rows");
+        Button deleteBtn = new Button("_Delete Selected Rows");
         deleteBtn.setOnAction(e -> deleteSelectedRows());
 
         KeyCombination kd = new KeyCodeCombination(KeyCode.D, KeyCombination.ALT_DOWN);
         Mnemonic mnemonic2 = new Mnemonic(deleteBtn, kd);
+        deleteBtn.setMnemonicParsing(true);
 
         VBox root = new VBox(newDataPane, new HBox(restoreBtn, deleteBtn), table);
         root.setSpacing(5);
